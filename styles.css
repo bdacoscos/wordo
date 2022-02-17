@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 16px;
+}
+
+.title {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#board {
+  width: calc(360px - 16px);
+  margin: 8px auto 16px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 6px;
+}
+
+.tile {
+  border: 2px solid #878a8c;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  background-color: white;
+  color: black;
+}
+
+#keyboard .row {
+  width: calc(360px - 16px);
+  margin: 6px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 4px;
+  min-width: 16px;
+  min-height: 24px;
+  line-height: 24px;
+  font-family: sans-serif;
+  background-color: rgb(211, 214, 218);
+  border: 2px solid transparent;
+}
+
+.key.double {
+  width: 45px;
+  text-align: center;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.kinda {
+  background-color: goldenrod;
+  border: 2px solid goldenrod;
+  color: white;
+}
+
+.yes {
+  background-color: green;
+  border: 2px solid green;
+  color: white;
+}
+
+.no {
+  background-color: gray;
+  border: 2px solid gray;
+  color: white;
+}
+
+.tile .try {
+  border: 1px solid black;
+  background: pink;
+}
