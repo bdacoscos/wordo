@@ -85,11 +85,20 @@ document.addEventListener("keydown", (event) => {
 
 const keys = document.querySelectorAll(".key");
 keys.forEach((key) => {
-  key.addEventListener("click", (event) => {
+  key.addEventListener("mouseup", (event) => {
     if (event.target.classList.contains("backspace")) {
-      handleLetter("backspace");
+      return handleLetter("backspace");
     } else {
-      handleLetter(event.target.innerText.toLowerCase());
+      return handleLetter(event.target.innerText.toLowerCase());
+    }
+  });
+
+  key.addEventListener("touchend", (event) => {
+    event.preventDefault();
+    if (event.target.classList.contains("backspace")) {
+      return handleLetter("backspace");
+    } else {
+      return handleLetter(event.target.innerText.toLowerCase());
     }
   });
 });
